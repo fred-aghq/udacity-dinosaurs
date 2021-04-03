@@ -1,6 +1,6 @@
-
+import './app.css';
     // Create Dino Constructor
-
+console.log('worked');
 
     // Create Dino Objects
 
