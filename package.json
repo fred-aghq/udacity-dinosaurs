@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "css-loader": "^5.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "postcss": "^8.2.9",
+    "postcss-loader": "^5.2.0",
+    "precss": "^4.0.0",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.0.4",
+    "webpack": "^5.28.0"
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.6.0"
+  }
+}
