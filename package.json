@@ -8,10 +8,11 @@
     "precss": "^4.0.0",
     "style-loader": "^2.0.0",
     "tailwindcss": "^2.0.4",
-    "webpack": "^5.28.0"
+    "webpack": "^5.28.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "dev": "webpack --mode development",
+    "start": "webpack serve --open --mode=development",
     "build": "webpack --mode production"
   },
   "devDependencies": {
