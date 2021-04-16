@@ -1,7 +1,40 @@
 import './app.css';
 import submitHandler from './submitHandler.js';
+import dinoJson from './dino.json';
+
+console.log(dinoJson.Dinos);
+
     // Create Dino Constructor
-console.log('worked');
+const DinoFactory = function(data) {
+    // function validate() {
+    // 
+    // }
+
+    // @FIXME: this works but I am not convinced it is the best pattern,
+    // particularly when it comes to scope
+    function Dino() {
+        this.species = data.species;
+        this.weight = data.weight;
+        this.height = data.height;
+        this.diet = data.diet;
+        this.where = data.where;
+        this.getSpecies = () => this.species;
+    };
+
+    // @TODO: validate data
+    // validate(data);
+
+    return new Dino();
+}
+
+// @TODO: remove this test/prototype code.
+dinoJson.Dinos.forEach(function(v) {
+    const dino = DinoFactory(v);
+    console.log(dino);
+    console.log(dino.getSpecies());
+})
+
+const Human = function() {}
 
     // Create Dino Objects
 
