@@ -5,6 +5,8 @@ const DinoFactory = function(data) {
 
     // @FIXME: this works but I am not convinced it is the best pattern,
     // particularly when it comes to scope
+
+    // @FIXME: seem to be able to change Dino properties from outside scope.
     function Dino() {
         this.species = data.species;
         this.weight = data.weight;
