@@ -1,25 +1,35 @@
-const DinoFactory = function(data) {
-    // function validate() {
-    // 
-    // }
+const DinoFactory = (function () {
+  return function (data) {
+    let species = data.species;
+    let weight = data.weight;
+    let height = data.height;
+    let diet = data.diet;
+    let where = data.where;
 
-    // @FIXME: this works but I am not convinced it is the best pattern,
-    // particularly when it comes to scope
-
-    // @FIXME: seem to be able to change Dino properties from outside scope.
-    function Dino() {
-        this.species = data.species;
-        this.weight = data.weight;
-        this.height = data.height;
-        this.diet = data.diet;
-        this.where = data.where;
-        this.getSpecies = () => this.species;
+    const dinoObject = {
+      getSpecies: function () {
+        return species;
+      },
+      setSpecies: function (speciesName) {
+        species = speciesName;
+      },
+      getWeight: function () {
+        return weight;
+      },
+      getHeight: function () {
+        return height;
+      },
+      getDiet: function () {
+        return diet;
+      },
+      getWhere: function () {
+        return where;
+      }
     };
 
-    // @TODO: validate data
-    // validate(data);
-
-    return new Dino();
-}
+    Object.preventExtensions(dinoObject);
+    return dinoObject;
+  };
+})();
 
 export default DinoFactory;
